@@ -1,0 +1,8 @@
+Pergentino;-15.867068,-47.761822;Programador;True
+Heráclio;-7.378871,-37.189213;Programador;False
+Pedrinaldino;-7.196807,-37.926007;Pistoleiro;True
+Bruno Bosta;-23.571198,-46.644415;Perturbador;True
+Valdemar; -26.307488,-48.841203;Dançarino;True
+Zélia;-16.680895,-49.256335;Gerente;False
+Harrington; 52.257689, 4.559548;Faz Tudo;True
+Nigini;47.616460,-122.322166;Pintor;True
