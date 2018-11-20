@@ -33,7 +33,7 @@ class Graph(object):
 			self.users.append(n)	
 			self.x.append(node[3])
 			self.y.append(node[4])
-			self.labels.append(node[0])
+			self.labels.append(node[0] + "::" + str(node[2]))
 			for i in range(len(content)):
 				if n.id != i:
 					self.graph[i].append((n, distance(n.lat, n.long, content[i][3], content[i][4])))
@@ -61,7 +61,7 @@ class Graph(object):
 		fig.suptitle(name)
 		plt.ioff()
 		plt.show()
-				
+
 	def build(self, content):
 		for i in range(len(content)):
 			self.graph[i] = list()
@@ -77,7 +77,7 @@ class Graph(object):
 	def getUsers(self, raio):
 		id, name, weight = [], [], []
 		for user in self.users:
-			if user.id != self.getSize()-1 and self.raioOrigin(user.id) <= raio:
+			if user.id != self.getSize()-1 and self.raioOrigin(user.id) <= raio and user.availability:
 				id.append(user.id)
 				name.append(user.name)
 				weight.append(self.raioOrigin(user.id))
@@ -110,7 +110,3 @@ class Graph(object):
 					if neighbour.id in togo:
 						dist_ans.append((weight_total, neighbour.id))
 		return answer, father, dist_ans
-
-
-
-
